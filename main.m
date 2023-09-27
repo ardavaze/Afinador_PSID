@@ -1,4 +1,4 @@
-%Prueba donde se obtiene la nota mi de la primera cuerda 330 Hz
+%bbbPrueba donde se obtiene la nota mi de la primera cuerda 330 Hz
 [x,Fs]=audioread('Notas de guitarra.mp3');
 sound(x,Fs)
 x1=x(:,1);
