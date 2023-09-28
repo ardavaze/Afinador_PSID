@@ -3,10 +3,12 @@ close all;
 [x,Fs]=audioread('audio_mi.wav');
 sound(x,Fs)
 x1=x(:,1);
+%señal en el dominio del tiempo
 figure 
 plot(x1)
 N=20000;
 x1=x1(10000:(10000-1)+N);
+%transformada
 X1=fft(x1);
 N=length(x1);
 n=0:N-1;
@@ -35,7 +37,7 @@ if Instrumento == 0
         case 6 % E
             freq_afin = 82.4;
         otherwise
-            disp()
+            disp('seleccionar nota')
     end
 else    
     switch Nota
