@@ -71,6 +71,13 @@ else
             disp('seleccionar nota')
     end
 end
-
+%elegiremos un margen de error de +-1hz
+if (fo - freq_afin) > 1 
+    disp('Desajustar')
+elseif (fo - estado) < -1
+    disp('Ajustar')
+else 
+    disp('La cuerda está afinada')
+end
 
 
