@@ -17,8 +17,6 @@ fk=k*Fs/N;
 %señal en el dominio de la frecuencia
 figure
 plot(fk(1:N/2),abs(X1(1:N/2)))
-% [mm, ii]=max(abs(X1(1:N/2)));
-% (ii-1)*Fs/N;
 %potencia espectral 
 pot=abs(X1).^2;
 [a,b]=max(pot);
@@ -71,10 +69,10 @@ else
             disp('seleccionar nota')
     end
 end
-%elegiremos un margen de error de +-1hz
-if (fo - freq_afin) > 1 
+%elegiremos un margen de error de +-0.5hz
+if (fo - freq_afin) > 0.5
     disp('Desajustar')
-elseif (fo - estado) < -1
+elseif (fo - estado) < -0.5
     disp('Ajustar')
 else 
     disp('La cuerda está afinada')
